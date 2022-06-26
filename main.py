@@ -9,6 +9,7 @@ def waff_kontrol(site):
         req = requests.get(site,headers={"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36"},timeout=15)
     except:
         print(f" {Fore.YELLOW}[!] {Fore.WHITE}Siteye istek gönderilemiyor, lütfen daha sonra tekrar deneyin.")
+        exit()
     for i in liste:
         if (liste[i] in req.headers['Server']):
             return i
